@@ -2,20 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@layer base{
+    body {
+        color: #fff;
+        background-color: black;
+    }
+}
+@layer components{
+    .menuLink{
+        @apply cursor-pointer hover:text-[#db0569] hover:underline ;
+        font-size: 20px;
+    }
+    
+    
+    .progress {
+        background-color: #e4c465;
+        animation: progressBar 3s ease-in;
+        animation-fill-mode:both; 
+    }
+    
+    @keyframes progressBar {
+      0% { width: 0; }
+      50% { width: 100%; }
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.title span{
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  position:relative;
+  padding-bottom: 8px;
+  
+  
+}
+ .title span::before,
+ .title span::after{
+  content: "";
+  position:absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #b74b4b;
+  left: 0;
+  bottom: 0;
+
+}
+ .title span::after{
+  bottom: -7px;
+  width:70%;
+  left:50%;
+  transform: translateX(-50%);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
