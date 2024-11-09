@@ -8,7 +8,7 @@ import React, { useEffect } from 'react'
 import Footer from '@/components/Footer'
 import AOS from "aos"
 import "aos/dist/aos.css"
-const hello = () => {
+const Hello = () => {
 
 useEffect(()=>{
   AOS.init({
@@ -25,8 +25,8 @@ useEffect(()=>{
   return (
     <div>
   <main>
-    <Hero/>
-    <About/>
+ <Hero/>
+<About/>
 <Skills/>
 <Project/>
 <Contact/>
@@ -36,4 +36,4 @@ useEffect(()=>{
   )
 }
 
-export default hello
+export default Hello
